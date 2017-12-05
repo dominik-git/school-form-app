@@ -1,0 +1,74 @@
+.error {
+	color: red;
+	text-align: left;
+}
+.label {
+	display: block;
+	margin: 10px 0px;
+}
+.send_button {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	width: 160px;
+}
+.center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.wrapper {
+	display: flex;
+	flex-direction: row;
+}
+.form_content {
+	border: 2px solid black;
+	padding: 5px;
+	text-align: center;
+	width: 250px;
+}
+
+.form_group {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.form_group input {
+	width: 80%;
+}
+.form_checkbox {
+	display: flex;
+	flex-direction: row;
+	text-align: left;
+}
+.form_group_wrapper {
+	text-align: left;
+}
+#myTable thead > tr {
+	height: 40px;
+}
+.navigation {
+	display: flex;
+	flex-direction: column;
+	margin: 5px;
+}
+.navigation_icon {
+	width: 16px;
+}
+
+.navigation_icon:hover {
+	color: red;
+}
+.td_header {
+	height: 45px;
+	width: 90px;
+}
+.td_content {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+.manage_button {
+	width: 200px;
+	margin: 10px;
+}

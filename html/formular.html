@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <link rel="stylesheet" href="../fontAwesome/css/font-awesome.min.css">
+</head>
+    <script src="../js/globaleVariables.js"></script>
+    <script src="../js/sorting.js"></script>
+    <script src="../js/helper.js"></script>
+    <script src="../js/validation.js"></script>
+    <script src="../js/addListeners.js"></script>
+
+<body onload="Util.init()">
+
+<div class="wrapper">
+ <form id="myForm" name="form1" >
+     <div class="form_content">
+         <div class="form_group_wrapper">
+              <div class="form_group">
+                   <label class="label">Meno:</label>
+                   <input type="text" name="firstName" value="" id="firstName"
+                          autocomplete="off"
+                   >
+
+                   <span id="firstNameError" class="error"></span>
+              </div>
+         </div>
+         <div class="form_group_wrapper">
+              <div class="form_group">
+                   <label class="label">Priezvisko:</label>
+                   <input type="text" name="surName" value="" id="surName"
+                         
+                          autocomplete="off"
+                   >
+
+                   <span id="surnameError" class="error"></span>
+              </div>
+          </div>
+         <div class="form_group_wrapper">
+              <div class="form_group">
+               <label class="label">Datum narodenia:</label>
+                  <input type="date"  value="" id="dob" required>
+                  <span id="dobError"  class="error"></span>
+              </div>
+         </div>
+
+         <div class="form_group_wrapper">
+             <label class="label">Pohlavie:</label>
+
+               <div class="form_checkbox">
+                   <input type="radio" id="radio_man" name="gender" value="man" checked="checked"> Muz
+               </div >
+
+               <div class="form_checkbox">
+                   <input type="radio" id="radio_women" name="gender" value="woman"> Zena
+               </div>
+              
+         </div>
+         <div class="center">
+             <button type="button" class="send_button" id="send_button"> ADD NEW USER </button>
+             <span id="form_error" class="error"></span>
+         </div>
+         <hr>
+         <div>
+                <input type="button" value="Load users from storage" id="LoadBttn" class="manage_button">
+                <input type="button" value="Save users to storage" id="SaveBttn" class="manage_button">
+            </div>
+     </div>
+     
+ </form>
+
+ 
+    <table border="1"  id="myTable">
+        <thead>
+            <tr>
+                <td id="td_name" class="td_header">
+                    <div class="td_content">
+                    <div class="navigation">
+                            <i class="fa fa-sort-asc  navigation_icon" aria-hidden="true" id="name_up"></i>
+                            <i class="fa fa-sort-desc navigation_icon" aria-hidden="true"  id="name_down"></i>
+                    </div>
+                    Meno
+                </div>
+                </td>
+                <td id="td_surName" class="td_header">
+                     <div class="td_content">
+                            <div class="navigation">
+                                    <i class="fa fa-sort-asc  navigation_icon" aria-hidden="true"  id="surname_up"></i>
+                                    <i class="fa fa-sort-desc navigation_icon" aria-hidden="true"  id="surname_down"></i>
+                            </div>
+                    Priezvisko
+                    </div>
+                </td>
+                <td id="td_gender" class="td_header">Pohlavie</td>
+                <td id="td_dob" class="td_header">DOB</td>
+                <td id="td_age" class="td_header">
+                    <input type="checkbox" name="age" value="age" id="convertDob"/>
+                    <span id="textOfDobInput">Show Age</span> 
+                </td>
+            </tr>
+        </thead>
+        <tbody></tbody>
+        
+    </table>
+
+</div>
+
+</body>
+
+</html>
